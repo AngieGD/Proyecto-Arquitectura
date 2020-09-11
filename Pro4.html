@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto IV</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body>
+    <div>
+        <h1>Lenguaje de máquina</h1>
+    </div>
+<p>
+
+    Comúnmente se suele entender fácil un lenguaje de alto nivel, no es necesario tener una profunda comprensión de la CPU interna, puesto que estos siguen una sintaxis similar al idioma inglés, como por ejemplo java, Python, c, c++, es por esto que una computadora no interpreta lenguajes de alto nivel, por lo tanto, esos programas deben convertirse a un lenguaje que sea capaz de interpretar, este lenguaje viene siendo el lenguaje de máquina. Dicha traducción se realiza utilizando un intérprete o compilador. 
+
+<br> <br>
+
+Un traductor es un meta programa que toma como entrada un programa (o parte de un programa) escrito en lenguaje simbólico -alejado de la máquina- denominado programa fuente y proporciona como salida otro programa semánticamente equivalente y escrito en un lenguaje comprensible por el hardware de la computadora que recibe el nombre de programa objeto. 
+
+<br> <br>
+
+ 
+
+Un compilador traduce completamente en programa fuente, con lo que genera un programa objeto (semánticamente equivalente) escrito en lenguaje máquina. El programa fuente suele estar contenido en un fichero, y el programa objeto puede almacenarse como otro fichero en memoria masiva para ser ejecutado más adelante, sin necesidad de volver a realizar la traducción. Una vez traducido un programa, su ejecución es independiente de su compilación. 
+
+<br> <br>
+
+ 
+
+Un intérprete permite que un programa fuente escrito en un determinado lenguaje sea traducido y ejecutado directamente sentencia a sentencia por la computadora. El intérprete capta una sentencia fuente, la analiza y la interpreta, lo que da lugar a su ejecución inmediata. En este caso no se crea ningún fichero o programa objeto almacenable en memoria masiva para posibles ejecuciones futuras. 
+
+<br> 
+
+<br> 
+</p>
+<img style="margin: auto; display: block;" src="/img/compi.jpg" alt="Compilador">
+<br><br><br>
+<p>
+    Para comprender el lenguaje de maquina debe entenderse que el computador es un dispositivo electrónico digital por lo que utiliza binarios para las operaciones. Ahora bien cabe resaltar que la estructura del lenguaje de maquina está completamente adaptada a los circuitos de la maquina y muy alejada de la forma de expresión y análisis de los problemas propio de los humanos. La programación en este lenguaje es complicada, de manera que como se enfatizaba anteriormente se necesita un profundo conocimiento de la arquitectura física del computador. Dentro de las ventajas del código de maquina esta la de hacer posible que el programador utilice la totalidad de los recursos ofrecidos por el ordenador, con lo que se obtienen programas bastante eficientes en tiempo de ejecución y en ocupación de memoria.  
+</p>
+<br><br>
+<img style="margin: auto; display: block; width: 30em; height: 12em;" src="/img/compi2.png" alt="Compilador">
+  <br>
+  <p>
+    <br> 
+
+    En este proyecto se tratará acerca de lo que viene siendo el lenguaje de bajo nivel. Para empezar, debemos entender que comúnmente No se suele programar directamente en código binario pues tiende a ser una labor bastante innecesaria pues actualmente se cuenta con un lenguaje simbólico de bajo nivel o también conocido como lenguaje ensamblador, quien sencillamente se encarga de traducir lo que nosotros programamos a binario. Ahora bien, como lo mencionábamos el enfoque será el de conocer las bases teórico-prácticas de la programación de bajo nivel apoyándonos en el lenguaje de máquina, de esta manera podremos ver como se ejecuta el código binario nativo en la plataforma de hardware de destino. 
+    
+    <br> 
+    
+    <br> 
+    
+     
+    
+    En cuanto al programa a realizar se debe asumir que la multiplicación entre RAM no debe ser mayor a 32768, es decir,  32768 > R0*R1.  Físicamente el programa lee la entrada del teclado y cuando se presiona tecla una se oscurece la pantalla, es decir, se escribe “black” en cada píxel; cuando el programa no detecta ninguna entrada de teclado sobre escribe cada pixel con “White”, este programa se realizó mediante la implementación de un bucle infinito encargado de la lectura de entrada del teclado. 
+    
+    <br> 
+    
+    <br> 
+    
+    <br> 
+  </p>  
+  <img style="margin: auto; display: block; width: 30em; height: 20em;" src="/img/pro4.PNG" alt="Inter">
+<p>
+    <br> 
+
+<br> 
+
+<br> 
+
+ 
+
+En el proyecto 04 encontramos dos subcarpetas, “fill” y “mult”; dentro de la carpeta “mult” está el archivo “Mult.asm” que como le mencionaba anteriormente es el encargado de realizar la multiplicación entre RAM desde la RAM[0] hasta la RAM[15], con una estructura acumulativa, es decir, la multiplicación entre R[0] y R[1] es almacenada en R[2], asumiendo que R[0]>0 y R[1]>=0. En la carpeta “fill” está el archivo “Fill.asm” que es donde está directamente el programa bucle de lectura del teclado y marcación de pixeles. 
+
+<br> 
+
+<br> 
+
+ 
+
+Ya para finalizar vale la pena aclarar que, en este proyecto se manejan dos tipos de instrucciones la instrucción “A” la cual es usada para   establecer el registro A en un valor de 15 bits y de igual forma con las instrucciones “C”, se representan gráficamente de la siguiente foema. 
+
+<br> 
+
+<br> 
+
+<br> 
+
+ 
+</p>
+<img style="margin: auto; display: block; width: 30em; height: 10em;" src="/img/pro2.PNG" alt="Inter">
+<br><br>
+<img style="margin: auto; display: block; width: 30em; height: 10em;" src="/img/pepe.png" alt="Inter">
+<br><br>
+
+</body>
+</html>

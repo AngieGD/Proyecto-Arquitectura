@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto II</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body>
+    <div>
+        <h1>Aritmética Booleana y ALU</h1>
+    </div>
+    <p>Los ceros y unos además de conformar una computadora pueden representar
+         cualquier cosa, por ejemplo, a los números enteros e incluso pueden realizar operaciones entre ellos.</p>
+<br>
+<p>Podemos representar números enteros como por ejemplo el 77 haciendo una conversión, de la siguiente forma:</p> 
+<br><br>  
+<img class="imgene" src="img/cover.gif" alt="Compuerta">
+<br><br>
+<p>También podemos hacer el proceso inverso:</p>
+<br><br>
+<img style="margin: auto;
+            display: block;
+            height: 13em;
+            width: 22em;" 
+src="img/cover2.png" alt="Compuerta">
+<br><br>
+<p>Los computadores tienen un rango fijo de valores que pueden representar, como 64 bits, 32 bits o en nuestro caso 8 bits y con este 
+    número de bits podemos representar 256 números, pero no serán exactamente del 0 al 255 los positivos pues 
+    hay que tener en cuenta los números negativos. Entonces de estos 256 números, 128 serán positivos y los demás negativos.</p>
+
+<br><br>
+<img style="margin: auto;
+display: block;
+height: 12em;
+width: 24em;" 
+src="img/sumar.png" alt="Compuerta">
+<br><br>    
+<p>En cuanto a las operaciones que realicemos también es muy
+     importante ese número de bits establecidos, pues si el valor de suma realizada supera este número de bits:</p>
+<br><br>
+<table class="bin">
+
+  
+    <tr>
+  
+      <td class="color1">1</td>
+      <td class="color1">0</td>
+      <td class="color1">0</td>
+      <td class="color1">1</td>
+      <td class="color1">0</td>
+      <td class="color1">1</td>
+      <td class="color1">0</td>
+      <td class="color1">1</td>
+
+  
+  
+    </tr>
+    <tr>
+  
+        <td class="color1">1</td>
+        <td class="color1">1</td>
+        <td class="color1">0</td>
+        <td class="color1">1</td>
+        <td class="color1">1</td>
+        <td class="color1">1</td>
+        <td class="color1">0</td>
+        <td class="color1">0</td>
+  
+    </tr>
+</table>
+<p style="margin-left: 220px ;">________________________________</p>
+
+<br>
+<table class="bin" style="margin-left:230px;">
+
+    <tr>
+        <td class="color">1</td>
+
+        <td class="color1">1</td>
+        <td class="color1">1</td>
+        <td class="color1">1</td>
+        <td class="color1">0</td>
+        <td class="color1">1</td>
+        <td class="color1">0</td>
+        <td class="color1">0</td>
+        <td class="color1">1</td>
+  
+  
+    </tr>
+  
+  
+  </table>
+  <br><br>
+  <p>Este quitara la cantidad de bits necesarios con el fin de que 
+      queden los 8 bits, a esta acción se le conoce como truncar, en nuestro computador tenemos que construir un sumador con estas características. 
+      Para la construcción de este chip es importante pasar tres etapas:</p>
+
+      <br>
+      <p>Primero se analiza el proceso de sumar dos bits, luego para tres bits y con esto en la última etapa se pueden sumar cualquier cantidad de bits:</p>
+      <br>
+      <p><b>Primera etapa:</b> Se tienen cuatro opciones</p>
+      <br><br>
+
+
+                    <table class="binn" >
+
+        
+                        <tr>
+                        <td  class="color">0</td>
+                        <td class="color1">1</td>
+                        <td class="color2">0</td>
+                
+                    
+                        </tr>
+                        <tr>
+                    
+                            <td  class="color">0</td>
+                            <td class="color1">0</td>
+                            <td class="color2">1</td>
+                
+                    
+                        </tr>
+                    </table>
+                    <p style="margin-left: 4em ;">______________</p>
+                    
+                    <br>
+                
+                    <table class="binn">
+                    
+                        <tr>
+                    
+                            <td  class="color">0</td>
+                            <td class="color1">1</td>
+                            <td class="color2">1</td>
+
+                    
+                        </tr>
+                    
+                    
+                    </table>
+
+        <br>
+        <p style="  border: 1px solid white;">En estas tres la suma será de una forma normal,
+             las entradas del chip serán los dos bits y en las salidas una corresponde a la suma de los bits y la otra será el
+              acarreo, que para los tres es cero.</p>
+
+
+    <br>
+    <p>Otra opción:</p>
+    <br><br>
+    <table class="binn" >
+
+        
+        <tr>
+        <td class="color1">1</td>
+
+    
+        </tr>
+        <tr>
+    
+            <td  class="color">0</td>
+    
+
+    
+        </tr>
+    </table>
+    <br>
+    <p style="  border: 1px solid white;">En este caso en la salida del chip tendremos por un lado la suma que será 0 y el acarreo que será 1 </p>
+    <br>
+    <p>Es un chip con dos entradas binarias y dos salidas, una igualmente binaria y la otra corresponde al acarreo. Este chip es denominado como medio sumador.</p>
+    <br><br>
+<p> <b>Segunda etapa:</b> Para esta se tiene en cuenta que ya existe un posible acarreo, entonces en lugar de dos, serán tres las entradas del chip: los 
+    dos números binarios y el acarreo.  Este chip se conoce como sumador completo.</p>
+    <br><br> 
+<p><b>Tercera etapa:</b>En esta etapa unimos los dos chips que tenemos:</p>    
+<br>
+<table class="bin" style="margin-left:230px;">
+
+    <tr>
+        <td class="color1"><h3>h</h3></td>
+        <td class="color1"><h3>g</h3></td>
+        <td class="color1"><h3>f</h3></td>
+        <td class="color1"><h3>e</h3></td>
+        <td class="color1"><h3>d</h3></td>
+        <td class="color1"><h3>c</h3></td>
+        <td class="color1"><h3>b</h3></td>
+        <td class="color"><h3>a</h3></td>
+  
+    </tr>
+  
+  
+  </table>
+  <br><br>
+  <table class="bin" style="margin-left:230px;">
+
+    <tr>
+        <td class="color1"><h3>1</h3></td>
+        <td class="color1"><h3>0</h3></td>
+        <td class="color1"><h3>1</h3></td>
+        <td class="color1"><h3>0</h3></td>
+        <td class="color1"><h3>1</h3></td>
+        <td class="color1"><h3>0</h3></td>
+        <td class="color1"><h3>1</h3></td>
+        <td class="color"><h3>1</h3></td>
+  
+    </tr>
+    <tr>
+        <td class="color1"><h3>0</h3></td>
+        <td class="color1"><h3>1</h3></td>
+        <td class="color1"><h3>0</h3></td>
+        <td class="color1"><h3>0</h3></td>
+        <td class="color1"><h3>1</h3></td>
+        <td class="color1"><h3>1</h3></td>
+        <td class="color1"><h3>1</h3></td>
+        <td class="color"><h3>1</h3></td>
+  
+    </tr>
+  
+  </table>
+  <br><br>
+    <p>En la parte <b>a</b> de la suma solo tenemos dos entradas,
+         pues no hay acarreo aun, por ende, solo usamos el chip medio sumador. Para la parte <b>b</b> ya existe un acarreo,
+          entonces usaremos el sumador completo. </p>
+          <br><br><br>
+
+<h2 style="color: white;">ALU</h2>   
+<p>Representar y almacenar números es primordial en un computador, esto con un fin aún más importante que es la manipulación de
+     estos números de una manera estructurada y útil como la adición. El componente que esta a cargo de esto es la ALU (unidad lógica aritmética).</p>       
+<br>
+<p>La ALU es como dos unidades en una, hay una unidad lógica y otra aritmética. La unidad aritmética es responsable de manejar 
+    todas las operaciones numéricas en el computador.</p>  
+    <br>
+<p><b>Algunas de las operaciones que maneja la ALU son:</b></p>  
+<br> 
+    <p>
+    • ADD: A y B se suman. <br>
+    •	ADD con CARRY: A y B y un bit de arrastre se suman. <br>
+    •	SUBTRACT: B se resta de A (o viceversa). <br>
+    •	SUBTRACT con BORROW: B se resta de A (o viceversa) con préstamo (arrastre). <br>
+    •	NEGATE: A se resta de cero, volteando su signo (de - a +, o + a -). <br>
+    •	DECREMENT: restar 1 de A. <br>
+    •	PASS THROUGH: todos los bits de A pasan sin modificar. <br>
+
+    </p> 
+
+    <br><br>
+
+        <img id="imag" src="img/aluimg.png" alt="ALU">
+
+<p>Las ALUs simples no cuentan con circuitos para las multiplicaciones y divisiones por que en lugar de eso realizan una serie de adiciones,
+     en cambio la ALU de un procesador
+     más elegante como el de un procesador y un celular inteligente si cuenta con circuitos dedicados a estas operaciones. 
+     <br> <br>
+     En cuanto a la unidad lógica, esta realiza las operaciones lógicas como lo son AND, OR y NOT también realiza pruebas numéricas simples, 
+    como comprobar si un número es negativo.</p> 
+
+
+
+    
+</body>
+</html>

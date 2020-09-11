@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto I</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+
+
+</head>
+<body>
+
+        <h1>Boolean Functions and Gate Logic</h1>
+            <img id="imag" src="img/pc.png" alt="Computador">
+            <p>
+
+ Un equipo indispensable en la vida cotidiana es el computador, esta procesa grandes cantidades de datos a grandes velocidades y aunque resulte increíble internamente solo tiene ceros y unos, 
+ los cuales son más que suficientes para realizar todo. 
+ <br>
+ <br>
+ Este tipo de representación de ceros y unos se conoce como representación binaria lo que significa “de dos estados” en este caso encendido 1 y apagado 0. En los computadores el estado  encendido, cuando la electricidad fluye, representa verdadero y apagado, sin flujo de electricidad, representa falso. <br>
+ Para trabajar con estos valores se emplea el algebra booleana, en esta existen operaciones fundamentales como lo son:
+<br>
+
+</p>
+<br><br><br>
+
+<div class="row">
+    <div class="col-sm-4">
+        <img class="gate" src="img/or.png" alt="">
+    </div>
+<div class="col-sm-4">
+    <img class="gate2" src="img/and.png" alt="">
+</div>
+
+<div class="col-sm-4">
+    <img class="gate3" src="img/not.png" alt="">
+</div>
+</div>
+<br><br><br><br>
+
+               
+<p>
+    <br>
+    
+    Es muy sencillo entender como estas operaciones solo trabajan con ceros y unos, por ejemplo, en el caso de and en la imagen podemos apreciar que cuenta con dos entradas A y B y una salida C, cada una de estas entradas será cero o uno e igualmente su salida,
+    pero su salida depende de lo que se encuentre en las entradas, para entender mejor esto usamos las tablas de verdad, cada operación cuenta con una. 
+
+  
+
+</p>
+<br>
+<table class="bin">
+  <caption><h3>Tabla de And:</h3></caption>
+  <tr>
+
+    <td class="color1"><h3>A</h3></td>
+
+    <td class="color1"><h3>B</h3></td>
+
+    <td class="color"><h3>C</h3></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="color1"> 1</td>
+
+    <td class="color1">1</td>
+
+    <td class="color">1</td>
+
+  </tr>
+  <tr>
+
+    <td class="color1">1</td>
+
+    <td class="color1">0</td>
+
+    <td class="color">0</td>
+
+  </tr>
+  <tr>
+
+    <td class="color1">0</td>
+
+    <td class="color1">1</td>
+
+    <td class="color">0</td>
+
+  </tr>
+  <tr>
+
+    <td class="color1">0</td>
+
+    <td class="color1">0</td>
+
+    <td class="color">0</td>
+
+  </tr>
+
+</table>
+<br><br>
+           
+     
+<p>Podemos observar que, para obtener una salida verdadera (1), sus
+   dos entradas también deben serlo, de otra forma sus salidas son falsas (0). Un comportamiento diferente al de Or:</p>
+
+<br>
+<table class="bin">
+  <caption><h3>Tabla de Or:</h3></caption>
+  <tr>
+
+    <td class="color1"><h3>A</h3></td>
+
+    <td class="color1"><h3>B</h3></td>
+
+    <td class="color"><h3>C</h3></td>
+
+  </tr>
+
+  <tr>
+
+    <td class="color1"> 1</td>
+
+    <td class="color1">1</td>
+
+    <td class="color">1</td>
+
+  </tr>
+  <tr>
+
+    <td class="color1">1</td>
+
+    <td class="color1">0</td>
+
+    <td class="color">1</td>
+
+  </tr>
+  <tr>
+
+    <td class="color1">0</td>
+
+    <td class="color1">1</td>
+
+    <td class="color">1</td>
+
+  </tr>
+  <tr>
+
+    <td class="color1">0</td>
+
+    <td class="color1">0</td>
+
+    <td class="color">0</td>
+
+  </tr>
+</table>   
+<br><br>
+<p>En la que solo basta con tener una entrada verdadera para que 
+  la salida lo sea. Otra operación es Not, esta solo tiene una entrada y se comporta de la siguiente forma:</p> 
+  <br>
+  <table class="bin">
+    <caption><h3>Tabla de Not:</h3></caption>
+    <tr>
+  
+      <td class="color1"><h3>A</h3></td>
+  
+      <td class="color"><h3>B</h3></td>
+  
+    </tr>
+  
+    <tr>
+  
+      <td class="color1"> 1</td>
+  
+        <td class="color">0</td>
+  
+    </tr>
+    <tr>
+  
+      <td class="color1">0</td>
+    
+      <td class="color">1</td>
+  
+    </tr>
+  </table>
+  <br><br>
+  <p>Es muy sencilla, para que su salida sea verdadera su entrada deber ser falsa y es falsa cuando su entrada es verdadera.</p>
+  <br>
+  <p>La razón por la que se enfatiza en estas sencillas operaciones es porque las podemos combinar de muchas maneras incluso con más entradas
+    en busca de un especifico valor en la salida.
+     A demás para construir hardware necesitamos crear funciones con estas operaciones básicas. </p>
+<br>
+<p><h3 style="margin-left: 15px;">¿Como?</h3></p>
+<br>
+<img class="puerta" src="img/nand.png" alt="Compuerta">
+
+<p>Estas funciones se implementan usando compuertas lógicas. Una compuerta lógica es un chip elemental que 
+  cumple una función bien definida, estos chips se pueden asociar con más y crear compuertas lógicas compuestas, estas son un poco más complejas. 
+  Tenemos especial interés en la compuerta lógica nand: </p>
+
+  <br>
+  <table class="bin">
+    <caption><h3>Tabla de And:</h3></caption>
+    <tr>
+  
+      <td class="color1"><h3>A</h3></td>
+  
+      <td class="color1"><h3>B</h3></td>
+  
+      <td class="color"><h3>C</h3></td>
+  
+    </tr>
+  
+    <tr>
+  
+      <td class="color1"> 1</td>
+  
+      <td class="color1">1</td>
+  
+      <td class="color">0</td>
+  
+    </tr>
+    <tr>
+  
+      <td class="color1">1</td>
+  
+      <td class="color1">0</td>
+  
+      <td class="color">1</td>
+  
+    </tr>
+    <tr>
+  
+      <td class="color1">0</td>
+  
+      <td class="color1">1</td>
+  
+      <td class="color">1</td>
+  
+    </tr>
+    <tr>
+  
+      <td class="color1">0</td>
+  
+      <td class="color1">0</td>
+  
+      <td class="color">1</td>
+  
+    </tr>
+  
+  </table>
+<br>
+  
+</body>
+</html>
